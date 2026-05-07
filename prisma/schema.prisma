@@ -1,0 +1,94 @@
+// ============================================================
+// PRISMA SCHEMA — Food Ordering Web Application
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// USER — Authentication (US-011, US-012)
+// ============================================================
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orders Order[]
+
+  @@map("users")
+}
+
+// ============================================================
+// MENU ITEM — Menu display (US-001)
+// ============================================================
+model MenuItem {
+  id          String   @id @default(cuid())
+  name        String
+  price       Float
+  imageUrl    String
+  description String   @default("")
+  available   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  orderItems OrderItem[]
+
+  @@map("menu_items")
+}
+
+// ============================================================
+// ORDER — Checkout and confirmation (US-007, US-008, US-009, US-010)
+// ============================================================
+model Order {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  customerName String
+  phoneNumber String
+  address     String
+  totalPrice  Float
+  status      OrderStatus @default(PLACED)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  orderItems OrderItem[]
+
+  @@map("orders")
+}
+
+// ============================================================
+// ORDER ITEM — Individual items within an order (US-010)
+// ============================================================
+model OrderItem {
+  id         String   @id @default(cuid())
+  orderId    String
+  order      Order    @relation(fields: [orderId], references: [id])
+  menuItemId String
+  menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
+  name       String
+  price      Float
+  quantity   Int
+  createdAt  DateTime @default(now())
+
+  @@map("order_items")
+}
+
+// ============================================================
+// ENUMS
+// ============================================================
+enum OrderStatus {
+  PLACED
+  PREPARING
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+}

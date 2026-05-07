@@ -1,0 +1,143 @@
+{
+  "name": "food-ordering-web-application",
+  "description": "Food Ordering Web Application — ```\n================================================================================\nUSER STORY 001\nEpic: Menu\nStory ID: US-001\n\nTITLE\nView menu items with key details\n\nUSER STORY\nAs a website visitor\nI want to view the list of food items with their name, price, and image\nSo that I can decide what to order.\n\nACCEPTANCE CRITERIA\nGiven I am on the Menu Page\nWhen the menu loads\nThen I can see food items displayed with name, price, and image.\n\nGiven food items are available\nWhen I scroll the Menu Page\nThen I can continue viewing additional items in the menu list.\n\nFIELDS\n• Food item name\n• Food item price\n• Food item image\n\nVALIDATIONS\n• Each displayed item must show a non-empty name\n• Each displayed item must show a price value\n• Each displayed item must show an image\n\n================================================================================\nUSER STORY 002\nEpic: Cart\nStory ID: US-002\n\nTITLE\nAdd menu items to cart\n\nUSER STORY\nAs a website visitor\nI want to add a selected food item to my cart\nSo that I can build my order before checkout.\n\nACCEPTANCE CRITERIA\nGiven I am on the Menu Page\nWhen I add a food item to the cart\nThen the item appears in the Cart Page.\n\nGiven I have already added an item to the cart\nWhen I add the same item again\nThen the item quantity in the cart increases.\n\nFIELDS\n• Selected food item\n• Cart items\n• Item quantity\n\nVALIDATIONS\n• Added item must be a valid menu item\n• Item quantity in cart must be at least 1\n\n================================================================================\nUSER STORY 003\nEpic: Cart\nStory ID: US-003\n\nTITLE\nView cart contents and total price\n\nUSER STORY\nAs a website visitor\nI want to view the items in my cart and the total price\nSo that I can understand what I am about to purchase.\n\nACCEPTANCE CRITERIA\nGiven I have items in my cart\nWhen I open the Cart Page\nThen I can see the list of items currently in my cart.\n\nGiven I have items in my cart\nWhen I view the Cart Page\nThen I can see the total price for all items in the cart.\n\nFIELDS\n• Cart items\n• Total price\n\nVALIDATIONS\n• Total price must reflect the current cart contents and quantities\n\n================================================================================\nUSER STORY 004\nEpic: Cart\nStory ID: US-004\n\nTITLE\nRemove items from cart\n\nUSER STORY\nAs a website visitor\nI want to remove an item from my cart\nSo that I can correct my order before placing it.\n\nACCEPTANCE CRITERIA\nGiven I have an item in my cart\nWhen I remove that item\nThen the item no longer appears in the cart.\n\nGiven I remove an item from my cart\nWhen I view the Cart Page\nThen the total price updates to reflect the removed item.\n\nFIELDS\n• Cart items\n• Total price\n\nVALIDATIONS\n• Removing an item must not affect other cart items\n\n================================================================================\nUSER STORY 005\nEpic: Cart\nStory ID: US-005\n\nTITLE\nChange item quantity in cart\n\nUSER STORY\nAs a website visitor\nI want to change the quantity of an item in my cart\nSo that I can order the correct number of items.\n\nACCEPTANCE CRITERIA\nGiven I have an item in my cart\nWhen I increase the quantity of the item\nThen the cart shows the updated quantity and updated total price.\n\nGiven I have an item in my cart\nWhen I decrease the quantity of the item\nThen the cart shows the updated quantity and updated total price.\n\nFIELDS\n• Item quantity\n• Total price\n\nVALIDATIONS\n• Quantity must be at least 1 for an item to remain in the cart\n\n================================================================================\nUSER STORY 006\nEpic: Navigation\nStory ID: US-006\n\nTITLE\nNavigate through the ordering pages\n\nUSER STORY\nAs a website visitor\nI want to move between the Menu Page, Cart Page, Checkout Page, and Confirmation Page\nSo that I can complete the ordering flow from selection to confirmation.\n\nACCEPTANCE CRITERIA\nGiven I am on the Menu Page\nWhen I choose to view my cart\nThen I am taken to the Cart Page.\n\nGiven I am on the Cart Page\nWhen I proceed to checkout\nThen I am taken to the Checkout Page.\n\nGiven I place an order from the Checkout Page\nWhen the order is accepted\nThen I am taken to the Confirmation Page.\n\nFIELDS\n• Menu Page\n• Cart Page\n• Checkout Page\n• Confirmation Page\n\nVALIDATIONS\n• Confirmation Page must be reachable only after placing an order\n\n================================================================================\nUSER STORY 007\nEpic: Checkout\nStory ID: US-007\n\nTITLE\nEnter checkout details\n\nUSER STORY\nAs a website visitor\nI want to enter my name, phone number, and address during checkout\nSo that the order can be prepared and delivered to the right person and location.\n\nACCEPTANCE CRITERIA\nGiven I am on the Checkout Page\nWhen I enter my name, phone number, and address\nThen the entered values are captured for the order.\n\nFIELDS\n• Customer name\n• Phone number\n• Address\n\nVALIDATIONS\n• Name must not be empty\n• Phone number must not be empty\n• Address must not be empty\n\n================================================================================\nUSER STORY 008\nEpic: Checkout\nStory ID: US-008\n\nTITLE\nPlace an order from checkout\n\nUSER STORY\nAs a website visitor\nI want to place my order from the Checkout Page\nSo that my cart items and details are submitted as an order.\n\nACCEPTANCE CRITERIA\nGiven I am on the Checkout Page and my cart has at least one item\nWhen I place the order\nThen the order is submitted using my cart contents and checkout details.\n\nGiven I place the order successfully\nWhen the submission completes\nThen I am shown a confirmation that the order was placed.\n\nFIELDS\n• Cart items\n• Customer name\n• Phone number\n• Address\n\nVALIDATIONS\n• An order cannot be placed if the cart is empty\n• An order cannot be placed if name, phone number, or address is empty\n\n================================================================================\nUSER STORY 009\nEpic: Confirmation\nStory ID: US-009\n\nTITLE\nShow order placed message\n\nUSER STORY\nAs a website visitor\nI want to see the message \"Order placed successfully\"\nSo that I know my order was completed.\n\nACCEPTANCE CRITERIA\nGiven my order has been placed successfully\nWhen I arrive on the Confirmation Page\nThen I see the message \"Order placed successfully\".\n\nFIELDS\n• Confirmation message\n\nVALIDATIONS\n• The message text must exactly match: Order placed successfully\n\n================================================================================\nUSER STORY 010\nEpic: Confirmation\nStory ID: US-010\n\nTITLE\nView order summary on confirmation\n\nUSER STORY\nAs a website visitor\nI want to view an order summary after placing an order\nSo that I can confirm what I ordered and the total price.\n\nACCEPTANCE CRITERIA\nGiven my order has been placed successfully\nWhen I view the Confirmation Page\nThen I can see an order summary of the items and quantities.\n\nGiven my order has been placed successfully\nWhen I view the Confirmation Page\nThen I can see the total price included in the order summary.\n\nFIELDS\n• Order summary items\n• Item quantities\n• Total price\n\nVALIDATIONS\n• Order summary must reflect the cart contents at the time the order was placed\n\n================================================================================\nUSER STORY 011\nEpic: Authentication\nStory ID: US-011\n\nTITLE\nSign up for a new account\n\nUSER STORY\nAs a new website visitor\nI want to create an account by providing my details\nSo that I can log in and access the main page to place orders.\n\nACCEPTANCE CRITERIA\nGiven I am on the Sign Up Page\nWhen I enter a valid name, email address, and password and submit the form\nThen my account is created successfully.\n\nGiven my account is created successfully\nWhen the registration completes\nThen I am redirected to the Login Page to sign in with my new credentials.\n\nGiven I enter an email address that is already registered\nWhen I submit the sign up form\nThen I see an error message indicating the email is already in use.\n\nFIELDS\n• Full name\n• Email address\n• Password\n• Confirm password\n\nVALIDATIONS\n• Full name must not be empty\n• Email address must be in a valid email format\n• Email address must not already be registered\n• Password must not be empty\n• Password must meet minimum length requirements\n• Confirm password must match the entered password\n\n================================================================================\nUSER STORY 012\nEpic: Authentication\nStory ID: US-012\n\nTITLE\nLog in to access the main page\n\nUSER STORY\nAs a registered user\nI want to log in with my email and password\nSo that I can access the main page and start ordering.\n\nACCEPTANCE CRITERIA\nGiven I am on the Login Page\nWhen I enter a valid registered email and correct password and submit the form\nThen I am authenticated successfully and redirected to the main page.\n\nGiven I am on the Login Page\nWhen I enter an unregistered email or an incorrect password\nThen I see an error message indicating the credentials are invalid.\n\nGiven I have not completed signup\nWhen I attempt to access the main page directly\nThen I am redirected to the Login Page.\n\nGiven I am successfully logged in\nWhen I arrive on the main page\nThen I can see the menu and begin building my order.\n\nFIELDS\n• Email address\n• Password\n\nVALIDATIONS\n• Email address must not be empty\n• Email address must be in a valid email format\n• Password must not be empty\n• Access to the main page must be restricted to authenticated users only\n• Invalid credentials must not reveal whether the email or password was incorrect\n\n``` generate the javascript code base for the above attched user stories",
+  "type": "fullstack",
+  "stack": {
+    "language": "javascript",
+    "backend": {
+      "framework": "express",
+      "orm": "drizzle"
+    },
+    "runtime": "node"
+  },
+  "features": [
+    {
+      "name": "Menu Items Display",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Menu Items Display: foodItemName [Must not be empty], foodItemPrice (number) [Must have a price value], foodItemImage (file) [Must show an image]"
+    },
+    {
+      "name": "Cart",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Cart: selectedFoodItem [Must be a valid menu item], cartItems, itemQuantity (number) [Must be at least 1], totalPrice (number) [Must reflect current cart contents and quantities]"
+    },
+    {
+      "name": "Checkout Details",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Checkout Details: customerName [Must not be empty], phoneNumber (phone) [Must not be empty], address (textarea) [Must not be empty]"
+    },
+    {
+      "name": "Order Confirmation",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Order Confirmation: confirmationMessage [Must exactly match: Order placed successfully], orderSummaryItems [Must reflect cart contents at time of order], itemQuantities (number), totalPrice (number) [Must reflect order total]"
+    },
+    {
+      "name": "Sign Up",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Sign Up: fullName [Must not be empty], emailAddress (email) [Valid email format; must not already be registered], password [Must not be empty; must meet minimum length requirements], confirmPassword [Must match the entered password]"
+    },
+    {
+      "name": "Login",
+      "type": "custom",
+      "entities": [
+        "MenuItem",
+        "CartItem",
+        "Order",
+        "User"
+      ],
+      "description": "Login: emailAddress (email) [Must not be empty; valid email format], password [Must not be empty; invalid credentials must not reveal which field is wrong]"
+    }
+  ],
+  "architecture": "layered",
+  "database": {
+    "type": "postgresql",
+    "entities": [
+      {
+        "name": "MenuItem",
+        "fields": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true
+          }
+        ]
+      },
+      {
+        "name": "CartItem",
+        "fields": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true
+          }
+        ]
+      },
+      {
+        "name": "Order",
+        "fields": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "fields": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "required": true,
+            "unique": true
+          }
+        ]
+      }
+    ]
+  },
+  "auth": {
+    "type": "jwt",
+    "roles": [
+      "website visitor",
+      "registered user"
+    ],
+    "rbac": false
+  },
+  "testing": false,
+  "documentation": false,
+  "docker": false,
+  "cicd": false
+}
